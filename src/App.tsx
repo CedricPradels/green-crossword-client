@@ -14,9 +14,12 @@ import Results from "./pages/Results";
 import Result from "./pages/Result";
 import Home from "./pages/Home";
 
+import { ApolloProvider } from "@apollo/react-hooks";
+import client from "./graphql/client";
+
 function App() {
   return (
-    <div>
+    <ApolloProvider client={client}>
       <Router>
         <Header />
         <Switch>
@@ -47,7 +50,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </div>
+    </ApolloProvider>
   );
 }
 

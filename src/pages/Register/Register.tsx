@@ -1,13 +1,16 @@
 import React from "react";
 
-import styled from "styled-components";
-
-const StyledRegister = styled.div``;
+import Default from "../../components/template/Default";
+import FormRegister from "../../components/organisms/FormRegister";
 
 interface IRegister {}
 
 const Register: React.FC<IRegister> = () => {
-  return <StyledRegister></StyledRegister>;
+  return (
+    <Default>
+      <FormRegister />
+    </Default>
+  );
 };
 
 export default Register;
