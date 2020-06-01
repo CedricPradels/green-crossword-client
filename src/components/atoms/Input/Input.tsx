@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styled from "styled-components";
 
@@ -13,8 +13,6 @@ interface IInput {
 }
 
 const Input: React.FC<IInput> = ({ ...rest }) => {
-  const [value, setValue] = useState("");
-
   return <StyledInput {...rest} />;
 };
 

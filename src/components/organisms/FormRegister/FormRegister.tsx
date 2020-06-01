@@ -23,7 +23,7 @@ interface IInputFields {
 const FormRegister: React.FC<IFormRegister> = () => {
   const history = useHistory();
 
-  const [register, { data, loading }] = useMutation(REGISTER);
+  const [register, { loading }] = useMutation(REGISTER);
 
   const [inputFields, setInputFields] = useState<IInputFields>({
     Email: "",
