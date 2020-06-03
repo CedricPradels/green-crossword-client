@@ -19,3 +19,11 @@ export const LOGIN = gql`
     }
   }
 `;
+
+export const CROSSWORD_CREATE = gql`
+  mutation CrosswordCreate {
+    createCrossword {
+      id
+    }
+  }
+`;

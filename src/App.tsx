@@ -7,11 +7,7 @@ import Footer from "./components/organisms/Footer";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Answer from "./pages/Answer";
-import Answers from "./pages/Answers";
-import Create from "./pages/Create";
-import Results from "./pages/Results";
-import Result from "./pages/Result";
+import Edit from "./pages/Edit";
 import Home from "./pages/Home";
 
 import { ApolloProvider } from "@apollo/react-hooks";
@@ -29,20 +25,8 @@ function App() {
           <Route path="/register">
             <Register />
           </Route>
-          <Route path="/:crosswordId/answer">
-            <Answer />
-          </Route>
-          <Route path="/:crosswordId/answers">
-            <Answers />
-          </Route>
-          <Route path="./:crosswordId/create">
-            <Create />
-          </Route>
-          <Route path="./:crosswordId/results">
-            <Results />
-          </Route>
-          <Route path="./:crosswordId/result">
-            <Result />
+          <Route path="/:crosswordId/edit">
+            <Edit />
           </Route>
           <Route path="/">
             <Home />
