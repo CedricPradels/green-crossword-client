@@ -9,16 +9,3 @@ export const LOGIN = gql`
     }
   }
 `;
-
-export const CROSSWORD_READ = gql`
-  query CrosswordRead($id: ID!) {
-    crosswordRead(id: $id) {
-      id
-      title
-      grade
-      answers
-      grid
-      definitions
-    }
-  }
-`;

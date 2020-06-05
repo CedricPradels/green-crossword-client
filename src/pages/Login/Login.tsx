@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import Default from "../../components/template/Default";
 import FormLogin from "../../components/organisms/FormLogin";
 
@@ -9,6 +11,7 @@ const Login: React.FC<ILogin> = () => {
   return (
     <Default>
       <FormLogin />
+      <Link to="/register">Go to register.</Link>
     </Default>
   );
 };

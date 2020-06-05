@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { useHistory } from "react-router-dom";
 
+import { useToken } from "../../../providers/token";
+
 import styled from "styled-components";
 
 import { useMutation } from "@apollo/react-hooks";
@@ -21,6 +23,8 @@ interface IInputFields {
 
 const FormLogin: React.FC<IFormLogin> = () => {
   const history = useHistory();
+  const { setToken } = useToken();
+
   const [inputFields, setInputFields] = useState<IInputFields>({
     Email: "",
     Password: "",
@@ -35,7 +39,7 @@ const FormLogin: React.FC<IFormLogin> = () => {
     try {
       const response = await login({ variables: { email, password } });
 
-      localStorage.setItem("token", response.data.login.token);
+      setToken(response.data.login.token);
 
       history.push("/");
     } catch (error) {
